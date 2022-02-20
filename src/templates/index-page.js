@@ -1,28 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+// import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+// import FullWidthImage from "../components/FullWidthImage";
+import Slider from "../components/Slider";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
+  // image,
+  // title,
   heading,
-  subheading,
+  // subheading,
   mainpitch,
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
+  // const heroImage = getImage(image) || image;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
+      <Slider />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
