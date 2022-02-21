@@ -39,6 +39,7 @@ module.exports = {
     `gatsby-plugin-image`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-image-background-slider",
     {
       resolve: "gatsby-transformer-remark",
       options: {
