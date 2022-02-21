@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 // import FullWidthImage from "../components/FullWidthImage";
-import Slider from "../components/Slider";
+// import Slider from "../components/Slider";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
           height: 830,
         }}
       >
-        <Slider />
+        {/* <Slider /> */}
         </div>
       <section className="section section--gradient">
         <div className="container">
