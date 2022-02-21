@@ -3,14 +3,11 @@ templateKey: index-page
 title: Best developers with passion
 image: /img/bg1.jpeg
 heading: Best developers with passion
-subheading: Support sustainable farming while enjoying a cup
+subheading: Support fast and scalable apps
 mainpitch:
   title: Why MSApps?
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    We are a dynamic and fast-growing company. At the moment, a large number of projects have been implemented in Israel and abroad. The principle of the company is to establish trusting partnerships with all customers. Combine and provide all the accumulated experience and knowledge to achieve goals, solve assigned tasks. And also to be a reliable guide in the world of the Mobile development.
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
