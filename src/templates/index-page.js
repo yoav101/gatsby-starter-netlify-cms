@@ -24,7 +24,16 @@ export const IndexPageTemplate = ({
   return (
     <div>
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
-      <Slider />
+      <div
+        className="my_slider"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          height: 830,
+        }}
+      >
+        <Slider />
+        </div>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">

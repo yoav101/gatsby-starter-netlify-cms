@@ -1,12 +1,7 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
-
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
+import * as emailjs from '@emailjs/browser';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -21,16 +16,18 @@ export default class Index extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch((error) => alert(error));
+    const btn = document.getElementById('contact_submit');
+    btn.value = 'Sending...';
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_USER_ID)
+      .then(() => {
+        btn.value = 'Send';
+        navigate(form.getAttribute("action"));
+      })
+      .catch((error) => {
+        btn.value = 'Send';
+        alert(error);
+      });
   };
 
   render() {
@@ -57,31 +54,31 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"name"}>
+                  <label className="label" htmlFor={"from_name"}>
                     Your name
                   </label>
                   <div className="control">
                     <input
                       className="input"
                       type={"text"}
-                      name={"name"}
+                      name={"from_name"}
                       onChange={this.handleChange}
-                      id={"name"}
+                      id={"from_name"}
                       required={true}
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"email"}>
+                  <label className="label" htmlFor={"reply_to"}>
                     Email
                   </label>
                   <div className="control">
                     <input
                       className="input"
                       type={"email"}
-                      name={"email"}
+                      name={"reply_to"}
                       onChange={this.handleChange}
-                      id={"email"}
+                      id={"reply_to"}
                       required={true}
                     />
                   </div>
@@ -101,9 +98,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
-                  </button>
+                  <input id="contact_submit" value="Send" className="button is-link" type="submit" />
                 </div>
               </form>
             </div>

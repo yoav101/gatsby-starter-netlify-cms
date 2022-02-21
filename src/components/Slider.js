@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import BackgroundSlider from 'gatsby-image-background-slider'
+import BackgroundSlider from 'gatsby-image-background-slider';
 
 export default function Slider() {
 

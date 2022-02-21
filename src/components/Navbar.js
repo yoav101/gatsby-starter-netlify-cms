@@ -49,6 +49,7 @@ const Navbar = class extends React.Component {
               data-target="navMenu"
               role="menuitem"
               tabIndex={0}
+              style= {{height: "5.25rem"}}
               onKeyPress={() => this.toggleHamburger()}
               onClick={() => this.toggleHamburger()}
             >
