@@ -2,6 +2,12 @@ import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
 import * as emailjs from '@emailjs/browser';
+import "./index.sass";
+import InfoCard from "../../components/InfoCard";
+import MapGoogle from "../../components/MapGoogle";
+import emailIcon from "../../img/email-icon.png"
+import phoneIcon from "../../img/phone-icon.png"
+import mapIcon from "../../img/map-icon.png"
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -36,7 +42,9 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1><span id="green-text">Reach</span> out to us</h1>
+              <div className="intro">Got a project in mind?</div>
+              <div className="intro" id='second-div'>Start your business with expert software egineering team</div>
               <form
                 name="contact"
                 method="post"
@@ -54,9 +62,6 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"from_name"}>
-                    Your name
-                  </label>
                   <div className="control">
                     <input
                       className="input"
@@ -65,13 +70,11 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"from_name"}
                       required={true}
+                      placeholder='Full Name'
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"reply_to"}>
-                    Email
-                  </label>
                   <div className="control">
                     <input
                       className="input"
@@ -80,13 +83,24 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"reply_to"}
                       required={true}
+                      placeholder='Email'
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"message"}>
-                    Message
-                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={"phone"}
+                      name={"phone_number"}
+                      onChange={this.handleChange}
+                      id={"phone_number"}
+                      required={true}
+                      placeholder='Phone'
+                    />
+                  </div>
+                </div>
+                <div className="field">
                   <div className="control">
                     <textarea
                       className="textarea"
@@ -94,13 +108,18 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"message"}
                       required={true}
+                      placeholder='Write Us'
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <input id="contact_submit" value="Send" className="button is-link" type="submit" />
+                <div className="field" id="button-send">
+                  <input id="contact_submit" value="Send" className="is-link" type="submit" />
                 </div>
               </form>
+            <InfoCard icon={emailIcon} title='Email Us' detail='info@msapps.mobi' />
+            <InfoCard icon={phoneIcon} title='Call Us' detail='+972 54 425 5549' />
+            <InfoCard icon={mapIcon} title='Visit Us' detail='Galgalei ha-Plada St. 6, Herzliya' />
+            <MapGoogle width='600px' height='500px' />
             </div>
           </div>
         </section>

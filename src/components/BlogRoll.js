@@ -7,12 +7,12 @@ class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const size = 4
-    const firstSizeBlogs = posts.slice(0, size)
+    // const size = 4
+    // const firstSizeBlogs = posts.slice(0, size)
     return (
       <div className="columns is-multiline">
         {posts &&
-          firstSizeBlogs.map(({ node: post }) => (
+          posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
