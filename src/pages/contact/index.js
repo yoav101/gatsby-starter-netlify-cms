@@ -42,9 +42,11 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
+            <div className="main_container">
+              <div className="left_container">
               <h1><span id="green-text">Reach</span> out to us</h1>
               <div className="intro">Got a project in mind?</div>
-              <div className="intro" id='second-div'>Start your business with expert software egineering team</div>
+              <div className="intro" id='second-div'>Start your business with an expert software egineering team</div>
               <form
                 name="contact"
                 method="post"
@@ -75,6 +77,8 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
+                <div className="emailPhone_container">
+                <div className="field" style={{flex: 2}}>
                   <div className="control">
                     <input
                       className="input"
@@ -87,7 +91,7 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
+                <div className="field" style={{flex: 2}}>
                   <div className="control">
                     <input
                       className="input"
@@ -98,6 +102,8 @@ export default class Index extends React.Component {
                       required={true}
                       placeholder='Phone'
                     />
+                  </div>
+                  </div>
                   </div>
                 </div>
                 <div className="field">
@@ -116,10 +122,14 @@ export default class Index extends React.Component {
                   <input id="contact_submit" value="Send" className="is-link" type="submit" />
                 </div>
               </form>
-            <InfoCard icon={emailIcon} title='Email Us' detail='info@msapps.mobi' />
-            <InfoCard icon={phoneIcon} title='Call Us' detail='+972 54 425 5549' />
-            <InfoCard icon={mapIcon} title='Visit Us' detail='Galgalei ha-Plada St. 6, Herzliya' />
-            <MapGoogle width='600px' height='500px' />
+              </div>
+              <div className="container_cards">
+                <InfoCard icon={emailIcon} title='Email Us' detail='info@msapps.mobi' />
+                <InfoCard icon={phoneIcon} title='Call Us' detail='+972 54 425 5549' />
+                <InfoCard icon={mapIcon} title='Visit Us' detail='Galgalei ha-Plada St. 6, Herzliya' />
+              </div>
+            </div>
+            <MapGoogle height='500px' />
             </div>
           </div>
         </section>
