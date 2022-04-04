@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import styled from "styled-components";
 import User from "../../static//img/user.png";
 import "./BlogRoll.css";

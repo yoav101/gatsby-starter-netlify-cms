@@ -7,7 +7,7 @@ const ClientsGrid = ({ gridItems }) => (
     {gridItems.map((item) => (
       <div key={item.text}>
         <div className="has-text-centered">
-        <a href={item.text} target="_blank">
+        <a href={item.text} target="_blank" rel="noreferrer">
         <PreviewCompatibleImage imageInfo={item} />
         </a>
         </div>
