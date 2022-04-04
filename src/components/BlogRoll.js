@@ -8,8 +8,9 @@ import "./BlogRoll.css";
 class BlogRollTemplate extends React.Component {
   constructor(props) {
     super(props);
+    const isBrowser = () => typeof window !== "undefined"
     this.state = {
-      isShowAllElements: /[^/]*$/.exec(`${window.location.href}`)[0] === "blog",
+      isShowAllElements: /[^/]*$/.exec(`${isBrowser() && window.location.href}`)[0] === "blog",
     };
   }
 
