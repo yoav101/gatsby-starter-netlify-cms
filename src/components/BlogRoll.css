@@ -1,3 +1,16 @@
+.columnDisplay {
+  float: left;
+  width: 33.33%;
+  height: 440px;
+  margin-bottom: 10px;
+}
+
+.rowDisplay:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .paginationBTNS {
   display: flex;
   width: 100%;
@@ -34,4 +47,16 @@
 .PreviousBTN {
   position: relative;
   top: 2px;
+}
+
+/* .box{
+  background-color: red;
+  height: 440px;
+  width: 436px;
+} */
+.button {
+  background-color: black;
+  display: flex;
+  align-items: baseline;
+  bottom: 0;
 }

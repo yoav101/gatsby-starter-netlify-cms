@@ -7,7 +7,9 @@ export default function InfoCard(props) {
   return (
     <div className="wrapper-card">
         <div className="card">
-        <img id="icon" alt={'icon'} src={icon} />
+          <div className="iconWrapper">
+            <img id="icon" alt={'icon'} src={icon} />
+          </div>
         <h5 id="title">{title}</h5>
         <div id="details">{detail}</div>
         </div>

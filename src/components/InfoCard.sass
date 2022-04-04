@@ -9,15 +9,12 @@
     align-items: center
     justify-content: space-around
     margin: 20px 20px
+    transition: transform .45s
 
 .content .wrapper-card
     display: flex
     flex-direction: column
     align-items: center
-
-#icon
-    width: 67
-    margin-top: 10px
 
 #title
     font-size: 18px
@@ -28,3 +25,61 @@
     font-size: 16px
     font-weight: 500
     margin-bottom: 29px
+
+.content .wrapper-card:hover .card
+    transform: translateX(-10%) translateY(2.5%)
+    //animation: swing .65s ease
+
+
+.iconWrapper
+    width: 67px
+    height: 67px
+    background-color: rgba(209, 222, 53, 0.2)
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50px
+
+.content .wrapper-card:hover .iconWrapper
+    background-color: rgba(209, 222, 53,1)
+    
+
+    #icon
+        filter: brightness(0) invert(1)
+
+#icon
+    filter: brightness(1) invert(0)
+
+@keyframes swing
+
+    15%
+    
+        -webkit-transform: translateX(10px)
+        transform: translateX(10px)
+    
+    30%
+    
+        -webkit-transform: translateX(-5px)
+        transform: translateX(-5px)
+    
+    50%
+    
+        -webkit-transform: translateX(3px)
+        transform: translateX(3px)
+    
+    65%
+    
+        -webkit-transform: translateX(-3px)
+        transform: translateX(-3px)
+    
+    80%
+    
+        -webkit-transform: translateX(2px)
+        transform: translateX(2px)
+    
+    100%
+
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+    
+

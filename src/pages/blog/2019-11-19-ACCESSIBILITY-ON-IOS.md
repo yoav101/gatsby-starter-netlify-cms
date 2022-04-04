@@ -4,12 +4,19 @@ title: ACCESSIBILITY ON IOS
 date: 2019-11-19T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/black-iphone-7.jpg
-description: Daniel Radshun - IOS provides an opportunity to make applications with built-in accessibility features.
+author: Daniel Radshun
 tags:
   - iOS
   - Accessibility
 ---
-![](/img/black-iphone-7.jpg)
+<style>
+img{
+  border-radius: 15px;
+}
+</style>
+<p align="center">
+  <img src="/img/black-iphone-7.jpg">
+</p>
 
 IOS provides an opportunity to make applications with built-in accessibility features. These features make your app accessible even for people with special needs or for disabled ones. Some of the main features are VoiceOver, Guided Access, Text to Speech, and more.
 

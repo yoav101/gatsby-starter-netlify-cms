@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import PersonIcon from "@mui/icons-material/Person";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -12,11 +13,12 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  author,
+  date,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-
   return (
     <section className="section">
       {helmet || ""}
@@ -26,6 +28,28 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <div
+              style={{
+                fontWeight: 700,
+                fontSize: "1em",
+                letterSpacing: "-0.02em",
+                display: "flex",
+                gap: "0.5rem",
+                alignItems: "center",
+              }}
+            >
+              <PersonIcon />
+              {author}
+            </div>
+            <div
+              style={{
+                letterspacing: "0.04em",
+                fontWeight: 400,
+                fontSize: "1em",
+              }}
+            >
+              {date}
+            </div>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -51,6 +75,8 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  author: PropTypes.string,
+  date: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 };
@@ -72,8 +98,10 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        author={post.frontmatter.author}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   );
@@ -96,6 +124,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        author
         tags
       }
     }
