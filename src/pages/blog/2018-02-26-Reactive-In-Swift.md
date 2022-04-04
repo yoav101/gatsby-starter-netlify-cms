@@ -4,12 +4,20 @@ title: REACTIVE IN SWIFT
 date: 2018-02-26T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/Reactive-Swift.png
-description:
+author: MSApps
 tags:
   - Swift
   - iOS
 ---
-![](/img/Reactive-Swift.png)
+
+<style>
+img{
+  border-radius: 15px;
+}
+</style>
+<p align="center">
+  <img src="/img/Reactive-Swift.png">
+</p>
 
 When designing iOS apps your default architecture will be MVC that comes from Cocoa framework.  
 In MVC the view controller is responsible for much more thing that it should. getting the data from all sources and rendering them to the UI at the same time.  Sooner you will find out that things get complicated.

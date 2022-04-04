@@ -2,45 +2,63 @@
 templateKey: index-page
 title: Best developers with passion
 image: /img/bg1.jpeg
-heading: Best developers with passion
 subheading: Support fast and scalable apps
 mainpitch:
   title: Why MSApps?
   description: >
     We are a dynamic and fast-growing company. At the moment, a large number of projects have been implemented in Israel and abroad. The principle of the company is to establish trusting partnerships with all customers. Combine and provide all the accumulated experience and knowledge to achieve goals, solve assigned tasks. And also to be a reliable guide in the world of the Mobile development.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+    - image: /img/clients/aman.png
+      text: "http://www.whatver.com"
+    - image: /img/clients/anyapp.png
+      text: "http://www.whatver2.com"
+    - image: /img/clients/bestbrilliance.png
+      text: "http://www.whatver3.com"
+    - image: /img/clients/codengine.png
+      text: "http://www.whatver4.com"
+    - image: /img/clients/codeoasis.png
+      text: "http://www.whatver5.com"
+    - image: /img/clients/commit.png
+      text: "http://www.whatver6.com"
+    - image: /img/clients/drippler.png
+      text: "http://www.whatver7.com"
+    - image: /img/clients/fairfly.png
+      text: "http://www.whatver8.com"
+    - image: /img/clients/heliconbooks.png
+      text: "http://www.whatver9.com"
+    - image: /img/clients/hisep.png
+      text: "http://www.whatver10.com"
+    - image: /img/clients/ideodigital.png
+      text: "http://www.whatver11.com"
+    - image: /img/clients/inmanage.png
+      text: "http://www.whatver12.com"
+    - image: /img/clients/mobikeys.png
+      text: "http://www.whatver13com"
+    - image: /img/clients/moblers.png
+      text: "http://www.whatver14com"
+    - image: /img/clients/moblin.png
+      text: "http://www.whatver15com"
+    - image: /img/clients/msbit.png
+      text: "http://www.whatver16.com"
+    - image: /img/clients/odysii.png
+      text: "http://www.whatver17.com"
+    - image: /img/clients/one.png
+      text: "http://www.whatver18.com"
+    - image: /img/clients/partner.png
+      text: "http://www.whatver19.com"
+    - image: /img/clients/pima.png
+      text: "http://www.whatver20.com"
+    - image: /img/clients/prospera.png
+      text: "http://www.whatver21.com"
+    - image: /img/clients/sb.png
+      text: "http://www.whatver22.com"
+    - image: /img/clients/zemingo.png
+      text: "http://www.whatver23.com"
+    - image: /img/clients/appmyday.png
+      text: "http://www.whatver24.com"
+    - image: /img/clients/hookapps.png
+      text: "http://www.whatver25.com"
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

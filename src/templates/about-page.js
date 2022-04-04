@@ -9,7 +9,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
+    <section className="section section--gradient" style={{background: 'url(../img/aboutUsBackground.svg)', backgroundRepeat: 'no-repeat', backgroundColor: "linear-gradient(197.76deg, #FFFFFF 12.29%, #FAFAFA 43.21%)" }}>
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">

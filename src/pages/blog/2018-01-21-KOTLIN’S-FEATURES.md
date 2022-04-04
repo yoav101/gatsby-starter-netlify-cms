@@ -4,12 +4,20 @@ title: KOTLIN’S FEATURES
 date: 2018-01-21T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/kotlin.png
-description: Kotlin is a Type Safety (statically typed) programming language developed by JetBrains, started in 2010 for modern multiplatform applications.
+author: MSApps
 tags:
   - Android
   - Kotlin
 ---
-![](/img/kotlin.png)
+
+<style>
+img{
+  border-radius: 15px;
+}
+</style>
+<p align="center">
+  <img src="/img/kotlin.png">
+</p>
 
 #### Kotlin is a Type Safety (statically typed) programming language developed by JetBrains, started in 2010 for modern multiplatform applications.
 

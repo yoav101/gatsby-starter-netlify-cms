@@ -3,13 +3,19 @@ templateKey: blog-post
 title: First experience with augmented reality
 date: 2018-01-21T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/Cat-VR.jpg
-description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
+author: MSApps
 tags:
   - Android
   - Augmented Reality
 ---
-![](/img/Cat-VR.jpg)
+<style>
+img{
+  border-radius: 15px;
+}
+</style>
+<p align="center">
+  <img src="/img/Cat-VR.jpg">
+</p>
 
 ARCore is a software development kit developed by Google that allows to build augmented reality applications. When first time I needed to start using ARCore, I started with making little research on the web to find out what is it exactly and what it can do.
 

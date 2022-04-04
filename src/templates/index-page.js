@@ -4,10 +4,11 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
+import ClientsGrid from "../components/Clients";
 import BlogRoll from "../components/BlogRoll";
-import ClientsGrid from "../components/ClientsGrid";
 import FullWidthImage from "../components/FullWidthImage";
+import FeedBack from "../components/FeedBack";
+import Contact from "../pages/contact";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -24,16 +25,6 @@ export const IndexPageTemplate = ({
   return (
     <div>
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />
-      {/* <div
-        className="my_slider"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          height: 830,
-        }}
-      > */}
-        {/* <Slider /> */}
-        {/* </div> */}
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -56,33 +47,29 @@ export const IndexPageTemplate = ({
                       <p>{description}</p>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
+                  <FeedBack />
+                  <div className="column is-12" style={{ padding: "0" }}>
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Our Clients
+                    </h3>
+                    <div style={{ margin: "3rem 0" }}>
+                      <ClientsGrid gridItems={intro.blurbs} />
                     </div>
                   </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Blog
-                    </h3>
+                  <div className="column is-12" style={{ padding: "0" }}>
+                    <h3 className="has-text-weight-semibold is-size-2">Blog</h3>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
+                      <Link className="seeMore" to="/blog">
+                        See more
                       </Link>
                     </div>
                   </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Clients
-                    </h3>
-                    <ClientsGrid />
+                  <div className="column is-12" style={{ padding: "0" }}>
+                    <Contact noLayout/>
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/clients">
-                        Read more
+                      <Link className="seeMore" to="/contact">
+                        Go to contact page
                       </Link>
                     </div>
                   </div>
@@ -110,7 +97,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
   return (
     <Layout>
       <IndexPageTemplate
@@ -152,12 +138,11 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(width: 150, quality: 55, layout: CONSTRAINED)
               }
             }
             text

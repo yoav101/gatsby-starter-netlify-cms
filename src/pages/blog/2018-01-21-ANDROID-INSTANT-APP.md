@@ -4,11 +4,19 @@ title: ANDROID INSTANT APP
 date: 2018-01-21T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/Android-Instant-App.png
-description:
+image: /img/Android-Instant-App.png
+author: MSApps
 tags:
   - Android
 ---
-![](/img/Android-Instant-App.png)
+<style>
+img{
+  border-radius: 15px;
+}
+</style>
+<p align="center">
+  <img src="/img/Android-Instant-App.png">
+</p>
 
 Have you ever thought about the idea to make people use your android app instant ly, without open your app in listing on Google Play Store and make them wonder if they should install it or not.
 
