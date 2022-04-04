@@ -21,30 +21,23 @@ export const IndexPageTemplate = ({
   intro,
 }) => {
   const heroImage = getImage(image) || image;
-
+  const splitTitle = mainpitch.title.split(" ")
   return (
-    <div>
+    <>
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
+              <div className="column is-12">
+                <div className="content" style={{gap: "2rem"}}>
                   <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
+                    <div className="tile" style={{gap: "1em"}}>
+                      <span className="title" style={{fontSize: "80px", color: "#3F3C55"}}>{splitTitle[0]}</span>
+                      <span className="title" style={{fontSize: "80px", color: "#d1de35"}}>{splitTitle[1]}</span>
                     </div>
                     <div className="tile">
                       <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
                     </div>
                   </div>
                   <FeedBack />
@@ -79,7 +72,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
@@ -142,7 +135,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(width: 150, quality: 55, layout: CONSTRAINED)
+                gatsbyImageData(quality: 100, layout: CONSTRAINED)
               }
             }
             text

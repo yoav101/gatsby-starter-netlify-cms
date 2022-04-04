@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const ClientsGrid = ({ gridItems }) => (
-  <div className="columns is-multiline" style={{gap: "0.5rem"}}>
+  <div className="columns is-multiline" style={{gap: "2rem"}}>
     {gridItems.map((item) => (
-      <div key={item.text}>
+      <div key={item.text} style={{alignSelf: "center", padding: "5px"}}>
         <div className="has-text-centered">
         <a href={item.text} target="_blank" rel="noreferrer">
         <PreviewCompatibleImage imageInfo={item} />

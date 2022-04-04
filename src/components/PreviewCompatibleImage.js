@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import "./PreviewCompatibleImage.sass"
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: "5px" };
+  const imageStyle = { maxWidth: "170px" };
 
   const { alt = "", childImageSharp, image } = imageInfo;
 

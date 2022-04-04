@@ -31,7 +31,7 @@ export default function FeedBack() {
   return (
     <>
     <div style={{position: "relative"}}>
-      <Carousel autoPlay>
+      <Carousel autoPlay={false} duration={1000} animation="fade" swipe>
         {items.map((item, i) => (
           <Item key={i} item={item} />
         ))}

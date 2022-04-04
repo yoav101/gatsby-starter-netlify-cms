@@ -10,55 +10,103 @@ mainpitch:
 intro:
   blurbs:
     - image: /img/clients/aman.png
-      text: "http://www.whatver.com"
+      text: "https://www.aman.co.il/"
     - image: /img/clients/anyapp.png
-      text: "http://www.whatver2.com"
+      text: "https://any-app.com/"
     - image: /img/clients/bestbrilliance.png
-      text: "http://www.whatver3.com"
+      text: "https://bestbrilliance.com/"
     - image: /img/clients/codengine.png
-      text: "http://www.whatver4.com"
+      text: "https://codengine.co/"
     - image: /img/clients/codeoasis.png
-      text: "http://www.whatver5.com"
-    - image: /img/clients/commit.png
-      text: "http://www.whatver6.com"
+      text: "https://www.codeoasis.com/"
+    - image: /img/clients/commIT.png
+      text: "https://www.comm-it.com/"
     - image: /img/clients/drippler.png
-      text: "http://www.whatver7.com"
+      text: "https://finder.startupnationcentral.org/company_page/drippler"
     - image: /img/clients/fairfly.png
-      text: "http://www.whatver8.com"
+      text: "https://www.fairfly.com/"
     - image: /img/clients/heliconbooks.png
-      text: "http://www.whatver9.com"
+      text: "https://www.heliconbooks.com/"
     - image: /img/clients/hisep.png
-      text: "http://www.whatver10.com"
+      text: "https://www.hisep.co.il/"
     - image: /img/clients/ideodigital.png
-      text: "http://www.whatver11.com"
+      text: "https://www.ideo-digital.com/"
     - image: /img/clients/inmanage.png
-      text: "http://www.whatver12.com"
+      text: "https://www.inmanage.co.il/"
     - image: /img/clients/mobikeys.png
-      text: "http://www.whatver13com"
+      text: "https://mobikeys.co.il/"
     - image: /img/clients/moblers.png
-      text: "http://www.whatver14com"
+      text: "https://moblers.com/"
     - image: /img/clients/moblin.png
-      text: "http://www.whatver15com"
+      text: "http://www.moblin.com/"
     - image: /img/clients/msbit.png
-      text: "http://www.whatver16.com"
+      text: "https://www.msbitsoftware.com/"
     - image: /img/clients/odysii.png
-      text: "http://www.whatver17.com"
+      text: "http://www.odysii.com/"
     - image: /img/clients/one.png
-      text: "http://www.whatver18.com"
+      text: "https://www.one1.co.il/"
     - image: /img/clients/partner.png
-      text: "http://www.whatver19.com"
+      text: "https://www.partner.co.il/"
     - image: /img/clients/pima.png
-      text: "http://www.whatver20.com"
+      text: "https://www.pima-alarms.com/"
     - image: /img/clients/prospera.png
-      text: "http://www.whatver21.com"
+      text: "https://www.prospera.ag/"
     - image: /img/clients/sb.png
       text: "http://www.whatver22.com"
     - image: /img/clients/zemingo.png
-      text: "http://www.whatver23.com"
+      text: "https://www.zemingo.com/"
     - image: /img/clients/appmyday.png
-      text: "http://www.whatver24.com"
+      text: "https://www.crunchbase.com/organization/appmyday"
     - image: /img/clients/hookapps.png
       text: "http://www.whatver25.com"
+    - image: /img/clients/ananey.png
+      text: "https://www.ananey.com/"
+    - image: /img/clients/applicaster.png
+      text: "https://www.applicaster.com/"
+    - image: /img/clients/bluesnap.png
+      text: "https://home.bluesnap.com/"
+    - image: /img/clients/bookaway.png
+      text: "https://www.bookaway.com/"
+    - image: /img/clients/cynet.png
+      text: "https://www.cynet.com/"
+    - image: /img/clients/devinstitute.png
+      text: "https://developers.institute/"
+    - image: /img/clients/donde.png
+      text: "http://www.whatver33.com"
+    - image: /img/clients/freshconcept.png
+      text: "https://www.fresh-concept.co.il/"
+    - image: /img/clients/chabadhertz.png
+      text: "https://www.chabadherzliya.org/"
+    - image: /img/clients/madnesssm.png
+      text: "http://madanes.com"
+    - image: /img/clients/matrix.png
+      text: "https://www.matrix.co.il/"
+    - image: /img/clients/mycheck.png
+      text: "https://mycheck.shijigroup.com/"
+    - image: /img/clients/myselffit.png
+      text: "https://www.myselffit.com/"
+    - image: /img/clients/ofir.png
+      text: "https://www.ophirins.co.il/"
+    - image: /img/clients/pairsonal.png
+      text: "https://www.pairsonal.com/"
+    - image: /img/clients/pajonos.png
+      text: "http://www.pajonos.com/"
+    - image: /img/clients/personetics.png
+      text: "https://personetics.com/"
+    - image: /img/clients/stern.png
+      text: "https://sternfaucets.com/"
+    - image: /img/clients/switchbee.png
+      text: "https://www.switchbee.com/"
+    - image: /img/clients/theranica.png
+      text: "https://theranica.com/"
+    - image: /img/clients/webtech.png
+      text: "https://www.webtech-inv.co.il/"
+    - image: /img/clients/zangula.png
+      text: "https://www.zangula.com/"
+    - image: /img/clients/zigit.png
+      text: "https://zigit.co.il/"
+    - image: /img/clients/sessme.png
+      text: "https://www.sessme.com/"
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
