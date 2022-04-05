@@ -19,7 +19,7 @@ intro:
       text: "https://codengine.co/"
     - image: /img/clients/codeoasis.png
       text: "https://www.codeoasis.com/"
-    - image: /img/clients/commIT.png
+    - image: /img/clients/commit.png
       text: "https://www.comm-it.com/"
     - image: /img/clients/drippler.png
       text: "https://finder.startupnationcentral.org/company_page/drippler"
