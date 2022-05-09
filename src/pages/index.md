@@ -19,7 +19,7 @@ intro:
       text: "https://codengine.co/"
     - image: /img/clients/codeoasis.png
       text: "https://www.codeoasis.com/"
-    - image: /img/clients/commIT.png
+    - image: /img/clients/commit.png
       text: "https://www.comm-it.com/"
     - image: /img/clients/drippler.png
       text: "https://finder.startupnationcentral.org/company_page/drippler"
@@ -103,10 +103,10 @@ intro:
       text: "https://www.webtech-inv.co.il/"
     - image: /img/clients/zangula.png
       text: "https://www.zangula.com/"
-    - image: /img/clients/zigit.png
-      text: "https://zigit.co.il/"
     - image: /img/clients/sessme.png
       text: "https://www.sessme.com/"
+    - image: /img/clients/zigit.png
+      text: "https://zigit.co.il/"
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

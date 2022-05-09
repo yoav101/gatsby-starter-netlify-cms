@@ -25,7 +25,6 @@ export default class BlogIndexPage extends React.Component {
               className="has-text-weight-bold is-size-1"
               style={{
                 padding: "1rem",
-                fontFamily: "Work Sans",
               }}
             >
               Blog
