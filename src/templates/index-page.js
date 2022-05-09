@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => {
   const heroImage = getImage(image) || image;
-  const splitTitle = mainpitch.title.split(" ")
+  const splitTitle = mainpitch.title.split(" ");
   return (
     <>
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />
@@ -30,11 +30,21 @@ export const IndexPageTemplate = ({
           <div className="section">
             <div className="columns">
               <div className="column is-12">
-                <div className="content" style={{gap: "2rem"}}>
+                <div className="content" style={{ gap: "2rem" }}>
                   <div className="content">
-                    <div className="tile" style={{gap: "1em"}}>
-                      <span className="title" style={{fontSize: "80px", color: "#3F3C55"}}>{splitTitle[0]}</span>
-                      <span className="title" style={{fontSize: "80px", color: "#d1de35"}}>{splitTitle[1]}</span>
+                    <div className="tile" style={{ gap: "1em" }}>
+                      <span
+                        className="title"
+                        style={{ fontSize: "80px", color: "#3F3C55" }}
+                      >
+                        {splitTitle[0]}
+                      </span>
+                      <span
+                        className="title"
+                        style={{ fontSize: "80px", color: "#d1de35" }}
+                      >
+                        {splitTitle[1]}
+                      </span>
                     </div>
                     <div className="tile">
                       <h3 className="subtitle">{mainpitch.description}</h3>
@@ -46,7 +56,7 @@ export const IndexPageTemplate = ({
                       Our Clients
                     </h3>
                     <div style={{ margin: "3rem 0" }}>
-                      <ClientsGrid gridItems={intro.blurbs} />
+                      <ClientsGrid gridItems={intro.blurbs} space="2rem"/>
                     </div>
                   </div>
                   <div className="column is-12" style={{ padding: "0" }}>
@@ -54,12 +64,12 @@ export const IndexPageTemplate = ({
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
                       <Link className="seeMore" to="/blog">
-                        See more
+                        See more blogs
                       </Link>
                     </div>
                   </div>
                   <div className="column is-12" style={{ padding: "0" }}>
-                    <Contact noLayout/>
+                    <Contact noLayout />
                     <div className="column is-12 has-text-centered">
                       <Link className="seeMore" to="/contact">
                         Go to contact page
