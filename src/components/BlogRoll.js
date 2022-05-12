@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 import User from "../../static//img/user.png";
-import "./BlogRoll.css";
+import "./BlogRoll.sass";
 
 class BlogRollTemplate extends React.Component {
   constructor(props) {
@@ -224,7 +224,7 @@ export default function BlogRoll() {
                       gatsbyImageData(
                         width: 436
                         height: 440
-                        quality: 100
+                        quality: 75
                         layout: CONSTRAINED
                       )
                     }

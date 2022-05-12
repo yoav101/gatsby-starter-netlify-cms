@@ -11,7 +11,6 @@ import PersonIcon from "@mui/icons-material/Person";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   author,
   date,
@@ -50,7 +49,6 @@ export const BlogPostTemplate = ({
             >
               {date}
             </div>
-            <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -74,7 +72,6 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   author: PropTypes.string,
   date: PropTypes.string,
   title: PropTypes.string,
@@ -88,14 +85,9 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
           </Helmet>
         }
         author={post.frontmatter.author}
@@ -123,7 +115,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         author
         tags
       }
