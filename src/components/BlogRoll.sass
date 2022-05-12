@@ -1,0 +1,52 @@
+.columnDisplay
+  float: left
+  width: 33.33%
+  height: 440px
+  margin-bottom: 10px
+
+.rowDisplay:after
+  content: ""
+  display: table
+  clear: both
+
+.paginationBTNS
+  display: flex
+  width: 100%
+  height: 50px
+  justify-content: center
+  align-items: center
+  margin-bottom: 0em
+
+  li
+    list-style: none
+
+  a
+    list-style: none
+    padding: 7px 7px
+    margin: 10px
+    border-radius: 10px
+    text-align: center
+    border: 1px solid rgba(43, 37, 35, 0.15)
+    color: #2b2523
+    cursor: pointer
+    background-color: white
+    font-weight: 700
+    text-decoration: none !important
+
+    &:hover
+      color: white !important
+      background-color: #2b2523
+
+.paginationActive a
+  color: white !important
+  background-color: #2b2523
+
+.PreviousBTN
+  position: relative
+  top: 2px
+
+.button
+  background-color: black
+  display: flex
+  align-items: baseline
+  bottom: 0

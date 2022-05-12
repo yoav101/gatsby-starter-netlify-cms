@@ -44,7 +44,6 @@ module.exports = {
         checkSupportedExtensions: false,
       },
     },
-    "gatsby-image-background-slider",
     {
       resolve: "gatsby-transformer-remark",
       options: {

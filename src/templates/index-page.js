@@ -14,7 +14,6 @@ import Contact from "../pages/contact";
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
   mainpitch,
   description,
@@ -50,7 +49,7 @@ export const IndexPageTemplate = ({
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
                   </div>
-                  <FeedBack />
+                  {/* <FeedBack items={intro.blurbs} /> */}
                   <div className="column is-12" style={{ padding: "0" }}>
                     <h3 className="has-text-weight-semibold is-size-2">
                       Our Clients
@@ -89,7 +88,6 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
@@ -105,7 +103,6 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
@@ -132,10 +129,9 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            gatsbyImageData(quality: 75, layout: FULL_WIDTH)
           }
         }
-        heading
         subheading
         mainpitch {
           title
@@ -145,7 +141,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(quality: 100, layout: CONSTRAINED)
+                gatsbyImageData(quality: 75, layout: CONSTRAINED)
               }
             }
             text

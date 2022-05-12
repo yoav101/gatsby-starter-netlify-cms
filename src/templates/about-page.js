@@ -9,20 +9,58 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient" style={{background: 'url(../img/aboutUsBackground.svg)', backgroundRepeat: 'no-repeat', backgroundColor: "linear-gradient(197.76deg, #FFFFFF 12.29%, #FAFAFA 43.21%)" }}>
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+    <div
+      style={{
+        background: "url(../img/aboutUsBackground.svg)",
+        minHeight: "860px",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
+        backgroundSize: "cover",
+        backgroundColor:
+          "linear-gradient(197.76deg, #FFFFFF 12.29%, #FAFAFA 43.21%)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          gap: "1rem",
+        }}
+      >
+        <div
+          style={{
+            minHeight: "700px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "1rem",
+          }}
+        >
+          <h2
+            style={{
+              fontWeight: "700",
+              fontSize: "70px",
+              marginLeft: "3rem",
+            }}
+          >
+            {title}
+          </h2>
+          <div
+            style={{
+              background: "rgba(240,230,242, 0.4)",
+              borderRadius: "1.25em",
+              backdropFilter: "blur(30px)",
+              border: "3px",
+              maxWidth: "900px",
+              padding: "3.3rem 4.5rem",
+            }}
+          >
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
