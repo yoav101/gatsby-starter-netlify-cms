@@ -9,15 +9,13 @@ import FeedBack from "../components/FeedBack";
 export const FeedbackPageTemplate = ({ title, image, intro }) => {
   const img = getSrc(image)?.split("/");
   let imgUrl;
-  if (img){
+  if (img) {
     imgUrl = img[img.length - 1];
-  } 
-  debugger
+  }
   return (
     <div
       style={{
-        background:
-          `linear-gradient(180.16deg, rgba(0, 0, 0, 0.63) 0.23%, rgba(0, 0, 0, 0.45) 35.27%, rgba(0, 0, 0, 0) 99.96%), url(../img/feedback/${imgUrl})`,
+        background: `linear-gradient(180.16deg, rgba(0, 0, 0, 0.63) 0.23%, rgba(0, 0, 0, 0.45) 35.27%, rgba(0, 0, 0, 0) 99.96%), url(../img/feedback/${imgUrl})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -70,7 +68,6 @@ FeedbackPageTemplate.propTypes = {
 
 const FeedbackPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
   return (
     <Layout>
       <FeedbackPageTemplate
