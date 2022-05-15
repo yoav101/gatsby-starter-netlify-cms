@@ -16,7 +16,6 @@ export const IndexPageTemplate = ({
   title,
   subheading,
   mainpitch,
-  description,
   intro,
 }) => {
   const heroImage = getImage(image) || image;
@@ -55,7 +54,7 @@ export const IndexPageTemplate = ({
                       Our Clients
                     </h3>
                     <div style={{ margin: "3rem 0" }}>
-                      <ClientsGrid gridItems={intro.blurbs} space="2rem"/>
+                      <ClientsGrid gridItems={intro.blurbs} space="2rem" />
                     </div>
                   </div>
                   <div className="column is-12" style={{ padding: "0" }}>
@@ -90,7 +89,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -105,7 +103,6 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -146,8 +143,6 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
-          description
         }
       }
     }
