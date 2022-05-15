@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import ClientsGrid from "../components/Clients";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
-import FeedBack from "../components/FeedBack";
 import Contact from "../pages/contact";
 
 // eslint-disable-next-line
@@ -48,7 +47,6 @@ export const IndexPageTemplate = ({
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
                   </div>
-                  {/* <FeedBack items={intro.blurbs} /> */}
                   <div className="column is-12" style={{ padding: "0" }}>
                     <h3 className="has-text-weight-semibold is-size-2">
                       Our Clients
