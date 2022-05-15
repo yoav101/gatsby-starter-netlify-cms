@@ -13,7 +13,7 @@ intro:
         pressure and lack of suitable stuff. They were fast, smart and to the
         point. Now that we have a relationship with them we know that we always
         have someone to depend on with our products.
-      clientImage: /img/Android-Instant-App.png
+      clientImage: a
     - picturePath: Guy_Eldar_feedback.png
       name: Guy Eldar
       company: App my Day sold to HoneyBook
@@ -32,5 +32,5 @@ intro:
         super cooperative to accommodate my requests time and time again.
         Eventually, thanks to the professional help from Michal and her team, we
         shipped the project on time and with the highest quality.
-      clientImage: /img/Artificial.png
+      clientImage: a
 ---
