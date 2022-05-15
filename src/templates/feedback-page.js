@@ -1,20 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { getSrc } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import FeedBack from "../components/FeedBack";
 
 // eslint-disable-next-line
 export const FeedbackPageTemplate = ({ title, image, intro }) => {
-  const backgroundImage = getImage(image) || image;
-
+  const img = getSrc(image)?.split("/");
+  let imgUrl;
+  if (img){
+    imgUrl = img[img.length - 1];
+  } 
+  debugger
   return (
     <div
       style={{
         background:
-          "linear-gradient(180.16deg, rgba(0, 0, 0, 0.63) 0.23%, rgba(0, 0, 0, 0.45) 35.27%, rgba(0, 0, 0, 0) 99.96%), url(../img/feedback/feedBackBackground.png)",
-        // minHeight: "57rem",
+          `linear-gradient(180.16deg, rgba(0, 0, 0, 0.63) 0.23%, rgba(0, 0, 0, 0.45) 35.27%, rgba(0, 0, 0, 0) 99.96%), url(../img/feedback/${imgUrl})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

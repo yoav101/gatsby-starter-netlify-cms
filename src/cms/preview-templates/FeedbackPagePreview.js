@@ -7,10 +7,11 @@ const FeedbackPagePreview = ({ entry, getAsset }) => {
     <FeedbackPageTemplate
       title={entry.getIn(["data", "title"])}
       image={getAsset(entry.getIn(["data", "image"]))}
-      picturePath={getAsset(entry.getIn(["data", "image"]))}
-      name={entry.getIn(["data", "name"])}
-      company={entry.getIn(["data", "company"])}
-      companyLink={entry.getIn(["data", "companyLink"])}
+      intro={entry.getIn(["data", "intro"])}
+      // picturePath={getAsset(entry.getIn(["data", "image"]))}
+      // name={entry.getIn(["data", "name"])}
+      // company={entry.getIn(["data", "company"])}
+      // companyLink={entry.getIn(["data", "companyLink"])}
     />
   );
 };
