@@ -2,7 +2,7 @@
 templateKey: feedback-page
 path: /feedbacks
 title: Feedback
-image: /img/feedback/feedBackBackground.png
+image: /img/Artificial.png
 intro:
   blurbs:
     - picturePath: Avsha_Shilin_feedback.png
