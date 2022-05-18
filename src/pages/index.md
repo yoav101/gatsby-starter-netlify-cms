@@ -1,12 +1,34 @@
 ---
 templateKey: index-page
-title: Best developers with passion
-image: /img/bg1.jpeg
-subheading: Support fast and scalable apps
+imageLogo: "/img/msapps-logo.svg"
+image: "/img/firstBackgroundImage.png"
+subheading: IT’S TIME TO CODE
 mainpitch:
   title: Why MSApps?
   description: >
     We are a dynamic and fast-growing company. At the moment, a large number of projects have been implemented in Israel and abroad. The principle of the company is to establish trusting partnerships with all customers. Combine and provide all the accumulated experience and knowledge to achieve goals, solve assigned tasks. And also to be a reliable guide in the world of the Mobile development.
+  services:
+    title: What do we do?
+    cases:
+    - title: IOS
+      desc: Developing advanced IOS applications with the latest features of IOS libraries
+      icon: "/img/ios.svg"
+    - title: Android
+      desc: Developing Android applications with high standards and with the latest android sdk packages
+      icon: "/img/android.svg"
+    - title: FullStack
+      desc: Full stack scalable robust servers development, silky smooth client side development
+      icon: "/img/fullstack.svg"
+    - title: Internet of Things
+      desc: Apps that talk to any gadget using BLE or WI-FI
+      icon: "/img/Iot.svg"
+    - title: Augmented Reality
+      desc: Advanced Augmented Reality applications using ARCore, ARKit Unity 3D
+      icon: "/img/AR.svg"
+    - title: Unity
+      desc: Create apps and games with advanced and innovative Unity technologies
+      icon: "/img/unity.svg"
+
 intro:
   blurbs:
     - image: /img/clients/aman.png

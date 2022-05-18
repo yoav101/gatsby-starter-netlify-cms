@@ -6,7 +6,7 @@ export default function FullWidthImage(props) {
   const {
     height = 400,
     img,
-    title,
+    imageLogo,
     subheading,
     imgPosition = "top left",
   } = props;
@@ -17,7 +17,7 @@ export default function FullWidthImage(props) {
         className="margin-top-0"
         style={{
           display: "grid",
-          alignItems: "center",
+          alignItems: "start",
         }}
       >
         {img?.url ? (
@@ -27,15 +27,12 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
               height: height,
               width: "100%",
             }}
-            // You can optionally force an aspect ratio for the generated image
             aspectratio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
             alt=""
-            formats={["auto", "webp", "avif"]}
+            formats={["auto", "webp", "avif", "png"]}
           />
         ) : (
           <GatsbyImage
@@ -44,54 +41,50 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
-              maxHeight: height,
             }}
             layout="fullWidth"
-            // You can optionally force an aspect ratio for the generated image
             aspectratio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
             alt=""
-            formats={["auto", "webp", "avif"]}
+            formats={["auto", "webp", "avif", "png"]}
           />
         )}
-        {(title || subheading) && (
+        {(imageLogo || subheading) && (
           <div
             style={{
-              // By using the same grid area for both, they are stacked on top of each other
               gridArea: "1/1",
               position: "relative",
-              // This centers the other elements inside the hero component
-              placeItems: "center",
               display: "grid",
+              background:
+                "linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))",
+              backdropFilter: "blur(7px)",
+              justifyContent: "center",
+              paddingTop: "75px",
+              marginTop: "260px",
+              // By using the same grid area for both, they are stacked on top of each other
             }}
           >
-            {/* Any content here will be centered in the component */}
-            {title && (
-              <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-                style={{
-                  background: "linear-gradient(90.48deg, #D1DE35 0%, #F8E56C 99.58%)",
-                  borderRadius: "10px",
-                  color: "white",
-                  lineHeight: "1",
-                  padding: "0.25em",
-                  textAlign: "center",
-                }}
-              >
-                {title}
-              </h1>
+            {imageLogo && (
+              <img
+              src={imageLogo}
+              style={{
+                gridArea: "1/1",
+                width: "100vw",
+                maxWidth: "32rem",
+              }}
+              alt=""
+            />
             )}
             {subheading && (
               <h3
                 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                 style={{
-                  background: "linear-gradient(90.48deg, #D1DE35 0%, #F8E56C 99.58%)",
-                  borderRadius: "10px",
-                  color: "white",
                   lineHeight: "1",
-                  padding: "0.25rem",
-                  marginTop: "0.5rem",
+                  marginBottom: "2.875rem",
+                  marginTop: "1.875rem",
+                  fontWeight: "600",
+                  fontSize: "32px",
+                  color: "#5F605D",
+                  textAlign: "center",
                 }}
               >
                 {subheading}
@@ -106,7 +99,7 @@ export default function FullWidthImage(props) {
 
 FullWidthImage.propTypes = {
   img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
+  imageLogo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   height: PropTypes.number,
   subheading: PropTypes.string,
 };
