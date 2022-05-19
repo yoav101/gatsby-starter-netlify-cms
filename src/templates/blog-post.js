@@ -42,9 +42,10 @@ export const BlogPostTemplate = ({
             </div>
             <div
               style={{
-                letterspacing: "0.04em",
+                letterSpacing: "0.04em",
                 fontWeight: 400,
-                fontSize: "1em",
+                fontSize: "0.875rem",
+                marginBottom: "20px",
               }}
             >
               {date}
@@ -52,13 +53,21 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4 style={{ fontSize: `2rem` }}>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
-                    <li key={tag + `tag`}>
+                    <li key={tag + `tag`} style={{}}>
                       <Link
                         to={`/tags/${kebabCase(tag)}/`}
-                        style={{ color: "#D1DE35", fontWeight: "bold" }}
+                        style={{
+                          fontWeight: "bold",
+                          backgroundColor: "#D1DE35",
+                          borderRadius: "20px",
+                          padding: "10px 20px",
+                          color: "#5b5b5b",
+                          filter:
+                            "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
+                        }}
                       >
                         {tag}
                       </Link>

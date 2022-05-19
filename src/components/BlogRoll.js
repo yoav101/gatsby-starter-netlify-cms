@@ -8,9 +8,10 @@ import "./BlogRoll.sass";
 class BlogRollTemplate extends React.Component {
   constructor(props) {
     super(props);
-    const isBrowser = () => typeof window !== "undefined"
+    const isBrowser = () => typeof window !== "undefined";
     this.state = {
-      isShowAllElements: /[^/]*$/.exec(`${isBrowser() && window.location.href}`)[0] === "blog",
+      isShowAllElements:
+        /[^/]*$/.exec(`${isBrowser() && window.location.href}`)[0] === "blog",
     };
   }
 
@@ -147,7 +148,7 @@ const MyIcon = styled.img.attrs((props) => ({ src: props.User }))`
 const Card = styled.div`
   background: ${(props) => `url(${props.image})`};
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   box-shadow: 0 0 30px 5px rgb(0 0 0 / 10%);
   display: flex;
   flex-direction: column;

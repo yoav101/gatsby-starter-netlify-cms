@@ -33,12 +33,6 @@ export const IndexPageTemplate = ({
               <Services data={mainpitch.services} />
             </div>
             <div className="column is-12" style={{ padding: "0" }}>
-              <h3
-                className="has-text-weight-semibold is-size-2"
-                style={{ textAlign: "center" }}
-              >
-                Our Clients
-              </h3>
               <div className="section">
                 <div style={{ margin: "3rem 0" }}>
                   <ClientsGrid gridItems={intro.blurbs} space="2rem" />

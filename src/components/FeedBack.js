@@ -50,14 +50,4 @@ const Item = (props) => {
     </div>
   );
 };
-
-// FeedBack.propTypes = {
-//   items: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-//       text: PropTypes.string,
-//     })
-//   ),
-// };
-
 export default FeedBack;

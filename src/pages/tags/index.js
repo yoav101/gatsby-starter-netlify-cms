@@ -3,6 +3,7 @@ import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import backgroundImg from "../../img/arrowsBackground.svg";
 
 const TagsPage = ({
   data: {
@@ -13,7 +14,14 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="section">
+    <section
+      className="section"
+      style={{
+        background: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        minHeight: "660px",
+      }}
+    >
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
         <div className="columns">
@@ -21,11 +29,26 @@ const TagsPage = ({
             className="column is-10 is-offset-1"
             style={{ marginBottom: "6rem" }}
           >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
+            <h1
+              className="title is-size-2 is-bold-light"
+              style={{ marginBottom: "3rem" }}
+            >
+              All tags
+            </h1>
             <ul className="taglist">
               {group.map((tag) => (
                 <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  <Link
+                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                    style={{
+                      fontWeight: "bold",
+                      backgroundColor: "#D1DE35",
+                      borderRadius: "20px",
+                      padding: "10px 20px",
+                      color: "#5b5b5b",
+                      filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
+                    }}
+                  >
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
                 </li>

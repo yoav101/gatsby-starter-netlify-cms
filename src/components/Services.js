@@ -26,18 +26,21 @@ const Services = ({ data }) => {
           ))}
         </div>
       </div>
+      <div
+      className="ourClientsText"
+        style={{
+          
+        }}
+      >
+        Our Clients
+      </div>
     </>
   );
 };
 
 const Item = ({ service }) => (
   <div className="container_Item">
-    <img
-      src={service.icon.publicURL}
-      alt=""
-      width={100}
-      height={100}
-    />
+    <img src={service.icon.publicURL} alt="" width={100} height={100} />
     <div className="titleDesc_Container">
       <div className="title">{service.title}</div>
       <div className="desc">{service.desc}</div>

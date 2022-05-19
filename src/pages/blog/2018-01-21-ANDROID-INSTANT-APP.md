@@ -9,14 +9,18 @@ author: MSApps
 tags:
   - Android
 ---
+
 <style>
-img{
+img {
   border-radius: 15px;
 }
+span.gatsby-resp-image-wrapper {
+  margin: 0 !important;
+}
 </style>
-<p align="center">
+<div style="margin-bottom: 10px;">
   <img src="/img/Android-Instant-App.png">
-</p>
+</div>
 
 Have you ever thought about the idea to make people use your android app instant ly, without open your app in listing on Google Play Store and make them wonder if they should install it or not.
 
@@ -32,25 +36,23 @@ And if you wonder how the user experience would be, this is not an issue at all,
 As you read previously, Instant app runs in response to launching a URL,  
 So how it works exactly?
 
-How does it work?
------------------
+## How does it work?
 
 When Google Play receives a request for a URL that matches an instant app, it sends the necessary code files to the Android device that sent the request. The device then runs the app.
 
 The URL which launches instant app must be using HTTPS, Instant apps does not support HTTP.  
 Each activity launches by a different route, keep reading, it will be much clear.
 
-Requirements for instant app
-----------------------------
+## Requirements for instant app
 
 To create an instant app you need to following:
 
-*   Android Studio version 3.0 or later
-*   Latest Android Support Library
-*   Android SDK Build Tools 26+
-*   Android SDK Tools 25+
-*   Latest Android Repository
-*   Android SDK platform O
+- Android Studio version 3.0 or later
+- Latest Android Support Library
+- Android SDK Build Tools 26+
+- Android SDK Tools 25+
+- Latest Android Repository
+- Android SDK platform O
 
 Android Instant Apps uses the runtime permissions model that was introduced in Android 6.0 (API level 23).  
 Instant app also need to break up the app into smaller modules and refactor them into feature modules.  
@@ -68,8 +70,7 @@ As mentioned, your URL must be using HTTPS to launch your app. If you don’t ha
 
 Firebase hosting service provides hosting with a HTTPS domain. Which exactly what we to make instant app launch.When you make a new project on Android Studio make sure you enabling ‘Include Android Instant App support’ checkbox.
 
-Beginning
----------
+## Beginning
 
 In the configure activity screen you need to provide the URL host(which must be HTTPS), Instant app URL Route, which launch the activity you want in the next input field (Activity name)
 
@@ -95,8 +96,7 @@ There is an App Links Assistant which can help you configure the entry point and
 
 Android Studio. Top bar menu settings
 
-Step 3
-------
+## Step 3
 
 in the App Links Assistant, associate the website (from firebase for example) by generating a digital asset links file which is a json file called ‘assetlinks.json’.  
 You need to upload that file to your website in a folder named ‘.well-known’.
@@ -112,8 +112,7 @@ You can generate the assetlinks.json file for dubug and release modes.
 After uploading the file to your website, click on ‘Link and Verify’ button to test it.  
 You can test it also on ‘https://developers.google.com/digital-asset-links/tools/generator’ by providing the hosting site domain, app package name and the app package fingerprint that can be found in the assetlinks.json file.
 
-Step 4
-------
+## Step 4
 
 in the App links assistant is to make sure that the corresponding route launches the activity you want and test it on the device or emulator.  
 If everything is verified and tested successfully you can build an APK for the base App and the instant app.
