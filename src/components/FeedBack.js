@@ -6,7 +6,7 @@ import Avatar from "@mui/material/Avatar";
 const FeedBack = ({ items }) => (
   <div style={{ position: "relative" }}>
     <Carousel autoPlay={false} duration={1000} animation="fade" swipe>
-      {items.map((item, i) => (
+      {items?.map((item, i) => (
         <Item key={i} item={item} />
       ))}
     </Carousel>
@@ -50,14 +50,4 @@ const Item = (props) => {
     </div>
   );
 };
-
-// FeedBack.propTypes = {
-//   items: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-//       text: PropTypes.string,
-//     })
-//   ),
-// };
-
 export default FeedBack;

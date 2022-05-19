@@ -56,8 +56,6 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
-          description
         }
       }
     }
