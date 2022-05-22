@@ -1,6 +1,6 @@
 import React from "react";
 import "./Services.sass";
-import whatWeDo from "../img/whatWeDo.svg";
+import whatWeDo from "../img/services-background.svg";
 
 const Services = ({ data }) => {
   return (
@@ -10,14 +10,13 @@ const Services = ({ data }) => {
         className="container_Services"
         style={{
           background: `url(${whatWeDo})`,
-          minHeight: "950px",
+          minHeight: "800px",
           backgroundRepeat: "no-repeat",
           position: "relative",
           backgroundSize: "cover",
           alignItems: "center",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
         }}
       >
         <div className="itemsWrapper">
@@ -26,21 +25,14 @@ const Services = ({ data }) => {
           ))}
         </div>
       </div>
-      <div
-      className="ourClientsText"
-        style={{
-          
-        }}
-      >
-        Our Clients
-      </div>
+      <div className="ourClientsText">Our Clients</div>
     </>
   );
 };
 
 const Item = ({ service }) => (
   <div className="container_Item">
-    <img src={service.icon.publicURL} alt="" width={100} height={100} />
+    <img src={service.icon.publicURL} alt="" />
     <div className="titleDesc_Container">
       <div className="title">{service.title}</div>
       <div className="desc">{service.desc}</div>

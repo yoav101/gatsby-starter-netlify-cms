@@ -26,39 +26,44 @@ export const IndexPageTemplate = ({
         imageLogo={imageLogo.publicURL}
         subheading={subheading}
       />
-      <div className="columns">
-        <div className="column is-12">
-          <div className="content" style={{ gap: "2rem" }}>
-            <div>
-              <Services data={mainpitch.services} />
+      <div className="content" style={{ gap: "2rem" }}>
+        <div>
+          <Services data={mainpitch.services} />
+        </div>
+        <div className="has-text-centered" style={{ padding: "0" }}>
+          <div
+            style={{
+              margin: "0 0 3rem",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <ClientsGrid gridItems={intro.blurbs} space="0rem" />
+          </div>
+        </div>
+        <div className="section">
+          <div style={{ padding: "0" }}>
+            <h3
+              className="has-text-centered has-text-weight-bold is-size-1"
+              style={{ color: "#3F3C55" }}
+            >
+              Blog
+            </h3>
+            <BlogRoll />
+            <div className="has-text-centered" style={{ marginTop: "65px" }}>
+              <Link className="seeMore" to="/blog">
+                See more
+              </Link>
             </div>
-            <div className="column is-12" style={{ padding: "0" }}>
-              <div className="section">
-                <div style={{ margin: "3rem 0" }}>
-                  <ClientsGrid gridItems={intro.blurbs} space="2rem" />
-                </div>
-              </div>
-            </div>
-            <div className="section">
-              <div className="column is-12" style={{ padding: "0" }}>
-                <h3 className="has-text-weight-semibold is-size-2">Blog</h3>
-                <BlogRoll />
-                <div className="column is-12 has-text-centered">
-                  <Link className="seeMore" to="/blog">
-                    See more blogs
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="column is-12" style={{ padding: "0" }}>
-              <Contact noLayout />
-              <div className="column is-12 has-text-centered">
+          </div>
+        </div>
+        <div className="" style={{ padding: "0" }}>
+          <Contact noLayout />
+          {/* <div className="column is-12 has-text-centered">
                 <Link className="seeMore" to="/contact">
                   Go to contact page
                 </Link>
-              </div>
-            </div>
-          </div>
+              </div> */}
         </div>
       </div>
     </>
