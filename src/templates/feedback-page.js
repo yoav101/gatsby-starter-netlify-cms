@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { getSrc } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import FeedBack from "../components/FeedBack";
+import "../components/FeedBack.sass";
 
 // eslint-disable-next-line
 export const FeedbackPageTemplate = ({ title, image, intro }) => {
@@ -16,42 +17,13 @@ export const FeedbackPageTemplate = ({ title, image, intro }) => {
     <div
       style={{
         background: `linear-gradient(180.16deg, rgba(0, 0, 0, 0.63) 0.23%, rgba(0, 0, 0, 0.45) 35.27%, rgba(0, 0, 0, 0) 99.96%), url(../img/feedback/${imgUrl})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
       }}
+      className="backgroundImage"
     >
-      <div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            height: "100vh",
-            gap: "5rem",
-          }}
-        >
-          <div
-            style={{
-              width: "50%",
-              fontWeight: 700,
-              color: "#FFFFFF",
-              fontSize: "70px",
-              paddingTop: "60px",
-              paddingLeft: "44px",
-            }}
-          >
-            {title}
-          </div>
-          <div
-            style={{
-              background: "rgba(255, 255, 255, 0.6)",
-              backdropFilter: "blur(20px)",
-              backgroundSize: "cover",
-              width: "50%",
-              boxShadow: "5px rgba(137, 137, 137, 0.4)",
-            }}
-          >
-            <FeedBack items={intro.blurbs} />
-          </div>
+      <div className="feedbackContainer">
+        <div className="title">{title}</div>
+        <div className="clientFeedbackContainer">
+          <FeedBack items={intro.blurbs} />
         </div>
       </div>
     </div>

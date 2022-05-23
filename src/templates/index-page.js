@@ -10,6 +10,7 @@ import FullWidthImage from "../components/FullWidthImage";
 import Services from "../components/Services";
 import Contact from "../pages/contact";
 import "../components/Services.sass";
+import { FeedbackPageTemplate } from "./feedback-page";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -18,6 +19,7 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   intro,
+  feedback,
 }) => {
   const backGroundImage = getImage(image) || image;
   return (
@@ -32,7 +34,7 @@ export const IndexPageTemplate = ({
           <Services data={mainpitch.services} />
         </div>
         <div className="has-text-centered" style={{ padding: "0" }}>
-        <div className="ourClientsText">Our Clients</div>
+          <div className="ourClientsText">Our Clients</div>
           <div
             style={{
               margin: "0 0 3rem",
@@ -42,6 +44,13 @@ export const IndexPageTemplate = ({
           >
             <ClientsGrid gridItems={intro.blurbs} space="0rem" />
           </div>
+        </div>
+        <div style={{ padding: "0" }}>
+          <FeedbackPageTemplate
+            title={feedback.title}
+            intro={feedback.intro}
+            image={feedback.image}
+          />
         </div>
         <div className="section">
           <div style={{ padding: "0" }}>
@@ -77,6 +86,7 @@ IndexPageTemplate.propTypes = {
   imageLogo: PropTypes.object,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
+  feedback: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -93,6 +103,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         intro={frontmatter.intro}
+        feedback={frontmatter.feedback}
       />
     </Layout>
   );
@@ -143,6 +154,23 @@ export const pageQuery = graphql`
               }
             }
             text
+          }
+        }
+        feedback {
+          title
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 75, layout: FULL_WIDTH)
+            }
+          }
+          intro {
+            blurbs {
+              picturePath
+              name
+              company
+              companyLink
+              description
+            }
           }
         }
       }

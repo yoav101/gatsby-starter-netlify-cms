@@ -2,9 +2,10 @@ import * as React from "react";
 import "./FeedBack.sass";
 import Carousel from "react-material-ui-carousel";
 import Avatar from "@mui/material/Avatar";
+import { isMobile } from "react-device-detect";
 
 const FeedBack = ({ items }) => (
-  <div style={{ position: "relative" }}>
+  <div style={{ position: "relative", paddingBottom: "50px" }}>
     <Carousel autoPlay={false} duration={1000} animation="fade" swipe>
       {items?.map((item, i) => (
         <Item key={i} item={item} />
@@ -19,34 +20,16 @@ const Item = (props) => {
       <Avatar
         alt={props.item.name}
         src={`../img/feedback/${props.item.picturePath}`}
-        sx={{ width: 150, height: 150, border: "5px solid #D1DE35" }}
+        className="avatar"
+        sx={{ width: isMobile ? 81 : 157, height: isMobile ? 81 : 157 }}
       />
-      <h2
-        style={{
-          fontWeight: 700,
-          color: "#3F3C55",
-          padding: "10px",
-          fontSize: "22px",
-        }}
-      >
-        {props.item.name}
-      </h2>
-      <h3 style={{ padding: "10px", fontSize: "20px" }}>
+      <h2 className="clientName">{props.item.name}</h2>
+      <h3 className="clientCompany">
         <a href={props.item.companyLink} target="_blank" rel="noreferrer">
           {props.item.company}
         </a>
       </h3>
-      <p
-        style={{
-          color: "#3F3C55",
-          paddingTop: "65px",
-          fontWeight: 600,
-          fontsize: "18px",
-          lineHeight: "1.875rem",
-        }}
-      >
-        {props.item.description}
-      </p>
+      <p className="description">{props.item.description}</p>
     </div>
   );
 };
