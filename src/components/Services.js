@@ -12,7 +12,7 @@ const Services = ({ data }) => {
           background: `url(${whatWeDo})`,
           minHeight: "800px",
           backgroundRepeat: "no-repeat",
-          position: "relative",
+          // position: "relative",
           backgroundSize: "cover",
           alignItems: "center",
           display: "flex",
@@ -25,7 +25,6 @@ const Services = ({ data }) => {
           ))}
         </div>
       </div>
-      <div className="ourClientsText">Our Clients</div>
     </>
   );
 };

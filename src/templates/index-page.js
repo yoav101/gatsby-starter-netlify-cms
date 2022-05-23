@@ -9,6 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import Services from "../components/Services";
 import Contact from "../pages/contact";
+import "../components/Services.sass";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -31,6 +32,7 @@ export const IndexPageTemplate = ({
           <Services data={mainpitch.services} />
         </div>
         <div className="has-text-centered" style={{ padding: "0" }}>
+        <div className="ourClientsText">Our Clients</div>
           <div
             style={{
               margin: "0 0 3rem",
