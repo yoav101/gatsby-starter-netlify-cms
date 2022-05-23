@@ -2,52 +2,42 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
-import User from "../../static//img/user.png";
 import "./BlogRoll.sass";
+import { isMobile } from "react-device-detect";
+import { getSrc } from "gatsby-plugin-image";
+import PersonIcon from "@mui/icons-material/Person";
 
-class BlogRollTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-    const isBrowser = () => typeof window !== "undefined";
-    this.state = {
-      isShowAllElements:
-        /[^/]*$/.exec(`${isBrowser() && window.location.href}`)[0] === "blog",
-    };
-  }
-
-  render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
-    const displayBlogs = posts
-      .slice(0, this.state.isShowAllElements ? posts.length : 3)
-      .map(({ node: post }, index) => {
-        const imgSrc =
-          post.frontmatter.featuredimage?.childImageSharp?.gatsbyImageData
-            ?.images?.fallback?.src;
-        return (
-          <Link to={post.fields.slug} key={index}>
-            <Card image={imgSrc}>
-              <BackDropShadow>
-                <AuthorWrapper>
-                  <Author>
-                    <MyIcon User={User} />
-                    <p>{post.frontmatter.author}</p>
-                  </Author>
-                </AuthorWrapper>
-                <InfoWrapper>
-                  <Info>
-                    <p>{post.frontmatter.date}</p>
-                    <h5>{post.frontmatter.title}</h5>
-                  </Info>
-                </InfoWrapper>
-              </BackDropShadow>
-            </Card>
-          </Link>
-        );
-      });
-    return <GridContainer>{displayBlogs}</GridContainer>;
-  }
-}
+const BlogRollTemplate = ({ data }) => {
+  const url = (window.location.href).split("/");
+  let isHomePage = url[url.length - 1] === "blog";
+  const { edges: posts } = data.allMarkdownRemark;
+  const displayBlogs = posts
+    .slice(0, isHomePage ? posts.length : (isMobile ? 2 : 6))
+    .map(({ node: post }, index) => {
+      const imgSrc = getSrc(post.frontmatter.featuredimage);
+      return (
+        <Link to={post.fields.slug} key={index}>
+          <Card image={imgSrc}>
+            <BackDropShadow>
+              <AuthorWrapper>
+                <Author>
+                  <PersonIcon sx={{ color: "#5B5B5B" }}/>
+                  <p>{post.frontmatter.author}</p>
+                </Author>
+              </AuthorWrapper>
+              <InfoWrapper>
+                <Info>
+                  <p>{post.frontmatter.date}</p>
+                  <h5>{post.frontmatter.title}</h5>
+                </Info>
+              </InfoWrapper>
+            </BackDropShadow>
+          </Card>
+        </Link>
+      );
+    });
+  return <GridContainer>{displayBlogs}</GridContainer>;
+};
 
 const GridContainer = styled.div`
   display: grid;
@@ -111,6 +101,7 @@ const AuthorWrapper = styled.div`
 const Author = styled.div`
   position: relative;
   background-color: #fff;
+  gap: 0.3125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +109,7 @@ const Author = styled.div`
   top: 31px;
   right: 16px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: -0.02em;
   transition: 2s ease-in-out;
   box-shadow: 0 0 30px 0px rgb(255 255 255 / 25%);
@@ -141,11 +132,6 @@ const BackDropShadow = styled.div`
   }
   border-radius: 15px;
   transition: 1.5s linear;
-`;
-
-const MyIcon = styled.img.attrs((props) => ({ src: props.User }))`
-  margin-right: 5px;
-  margin-top: -2px;
 `;
 
 const Card = styled.div`
@@ -239,7 +225,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data) => <BlogRollTemplate data={data} />}
     />
   );
 }
