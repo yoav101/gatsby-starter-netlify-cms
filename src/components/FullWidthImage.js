@@ -23,27 +23,31 @@ export default function FullWidthImage(props) {
         {img?.url ? (
           <img
             src={img}
-            objectFit={"cover"}
+            // objectFit={"cover"}
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
+              minHeight: "750px",
               height: height,
               width: "100%",
             }}
-            aspectratio={3 / 1}
+            // aspectratio={3 / 1}
             alt=""
             formats={["auto", "webp", "avif", "png"]}
           />
         ) : (
           <GatsbyImage
             image={img}
-            objectFit={"cover"}
-            objectPosition={imgPosition}
+            // objectFit={"cover"}
+            // objectPosition={imgPosition}
+            objectPosition={"center"}
             style={{
               gridArea: "1/1",
+              minHeight: "750px",
+              // position: "unset",
             }}
             layout="fullWidth"
-            aspectratio={3 / 1}
+            // aspectratio={3 / 1}
             alt=""
             formats={["auto", "webp", "avif", "png"]}
           />
@@ -65,14 +69,15 @@ export default function FullWidthImage(props) {
           >
             {imageLogo && (
               <img
-              src={imageLogo}
-              style={{
-                gridArea: "1/1",
-                width: "100vw",
-                maxWidth: "32rem",
-              }}
-              alt=""
-            />
+                src={imageLogo}
+                style={{
+                  gridArea: "1/1",
+                  width: "100vw",
+                  maxWidth: "32rem",
+                  padding: "16px",
+                }}
+                alt=""
+              />
             )}
             {subheading && (
               <h3

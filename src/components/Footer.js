@@ -1,57 +1,26 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import mobileApp from "../img/footer/mobile-app.svg";
+import topApp from "../img/footer/top-app.svg";
+import topMobile from "../img/footer/top-mobile.svg";
 import { SocialIcon } from "react-social-icons";
 import "./Footer.sass";
 
 const Footer = () => {
   return (
-    <footer className="footer has-background-black has-text-white-ter">
-      <div className="content has-text-centered has-background-black has-text-white-ter">
-        <div className="container has-background-black has-text-white-ter">
+    <footer
+      className="footer has-text-white-ter"
+      style={{ backgroundColor: "#3F3C55" }}
+    >
+      <div className="content has-text-centered has-text-white-ter">
+        <div className="container has-text-white-ter">
           <div style={{ maxWidth: "100vw" }} className="columns">
-            <div className="column is-4">
-              <section className="menu">
-                <ul className="menu-list">
-                  <li>
-                    <Link to="/" className="navbar-item">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/feedbacks">
-                      Feedbacks
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/clients">
-                      Clients
-                    </Link>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <div className="column is-4">
-              <section>
-                <ul className="menu-list">
-                  <li>
-                    <Link className="navbar-item" to="/blog">
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </section>
+            <div className="achievements_footer">
+              <img src={mobileApp} alt="achievement1" />
+              <img src={topApp} alt="achievement2" />
+              <img src={topMobile} alt="achievement3" />
             </div>
             <div className="socials_footer">
+              <div>Connect with us!</div>
               <SocialIcon
                 url="https://www.linkedin.com/company/msapps/"
                 target="_blank"
@@ -67,6 +36,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               />
+            </div>
+            <div className="rights_footer">
+              © 2022 by MSApps. All rights reserved.
             </div>
           </div>
         </div>

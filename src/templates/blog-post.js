@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
             <div
               style={{
                 fontWeight: 700,
-                fontSize: "1em",
+                fontSize: "0.625rem",
                 letterSpacing: "-0.02em",
                 display: "flex",
                 gap: "0.5rem",

@@ -4,8 +4,9 @@ import PersonIcon from "@mui/icons-material/Person";
 import defualtImg from '../img/defaultBlogImg.jpg';
 
 const BlogTag = ({ data }) => {
-  const img = data?.featuredimage?.publicURL ? data.featuredimage.publicURL : defualtImg;
-  debugger
+  const url = data?.featuredimage?.publicURL
+  const img = url && !url.includes("webp") ? data.featuredimage.publicURL : defualtImg;
+  // debugger
   return (
     <div
       className="container_BlogTag"

@@ -9,11 +9,9 @@ const Index = ({ intro }) => {
   return (
     <div className="content">
       <div className="client_header">Our clients</div>
-      <section className="section section--gradient">
-        <div style={{ margin: "3rem" }}>
-          <ClientsGrid gridItems={intro.blurbs} space="4rem" />
-        </div>
-      </section>
+      <div style={{ padding: "1rem", justifyContent: "center", display: "flex" }}>
+        <ClientsGrid gridItems={intro.blurbs} space="2rem" />
+      </div>
     </div>
   );
 };

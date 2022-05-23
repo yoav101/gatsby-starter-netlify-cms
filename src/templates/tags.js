@@ -43,14 +43,14 @@ const TagRoute = (props) => {
                 to="/tags/"
                 style={{
                   backgroundColor: "#D1DE35",
-                  borderRadius: "20px",
-                  padding: "10px 20px",
+                  borderRadius: "100px",
+                  padding: "15px 20px",
                   filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
                   maxWidth: "200px",
                   textAlign: "center",
                   fontSize: "18px",
                   fontWeight: "800",
-                  color: "white",
+                  color: "#5B5B5B",
                 }}
               >
                 Browse all tags
