@@ -67,38 +67,38 @@ const Info = styled.div`
   background-color: transparent;
   transition: all 3s ease-in-out;
   p {
-    font-family: "Work Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
     letter-spacing: 0.04em;
-    color: white;
+    color: #d1de35;
   }
 
   h5 {
-    font-family: "Work Sans", sans-serif;
-    font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 20px;
     letter-spacing: -0.02em;
     color: white;
     margin-top: -10px;
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
 `;
 
 const InfoWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 160px;
-  margin-top: 240px;
+  height: 140px;
   border-radius: 15px;
-  background: rgba(42, 39, 57, 0);
-  backdrop-filter: blur(0);
+  background: rgba(42, 39, 57, 0.6);
+  backdrop-filter: blur(7px);
   justify-content: center;
   align-items: center;
   transition: 2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  transform: translateY(-255px);
+  @media (min-width: 1024px) {
+    height: 160px;
+    background: rgba(42, 39, 57, 0);
+    backdrop-filter: blur(0);
+  }
 `;
 
 const AuthorWrapper = styled.div`
@@ -110,15 +110,13 @@ const AuthorWrapper = styled.div`
 `;
 const Author = styled.div`
   position: relative;
-  background-color: #d1de35;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   top: 31px;
   right: 16px;
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: -0.02em;
@@ -133,9 +131,14 @@ const Author = styled.div`
 `;
 
 const BackDropShadow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
   width: 100%;
   height: 100%;
-  background-color: rgba(10, 10, 10, 0.8);
+  @media (min-width: 1024px) {
+    background: rgba(42, 39, 57, 0.7);
+  }
   border-radius: 15px;
   transition: 1.5s linear;
 `;
@@ -155,38 +158,38 @@ const Card = styled.div`
   justify-content: center;
   border-radius: 15px;
   margin-top: 5px;
-  background-size: 125%;
-  cursor: pointer;
-  transition: background-size 2s linear, box-shadow 3s linear,
-    background-color 1.5s linear;
+  @media (min-width: 1024px) {
+    background-size: 125%;
+    cursor: pointer;
+    transition: background-size 2s linear, box-shadow 3s linear,
+      background-color 1.5s linear;
 
-  &:hover {
-    background-size: 108%;
-    box-shadow: 0 0 30px 0px rgb(0 0 0 / 100%);
-    filter: brightness(1.1);
-    transition: all 5s linear;
-  }
-  &:hover > ${BackDropShadow} {
-    background-color: transparent;
-  }
-  &:hover > ${BackDropShadow} > ${InfoWrapper} {
-    background: rgba(42, 39, 57, 0.6);
-    backdrop-filter: blur(7px);
-    transform: translateY(0);
-    transition: 1.5s ease-in-out;
-  }
-  &:hover > ${BackDropShadow} > ${AuthorWrapper} > ${Author} > p {
-    color: #5b5b5b;
-    transition: 2s ease-in-out;
-  }
-  &:hover > ${BackDropShadow} > ${AuthorWrapper} > ${Author} {
-    background-color: white;
-    transition: 2s ease-in-out;
-    box-shadow: 0 0 30px 0px rgb(0 0 0 / 100%);
-  }
-  &:hover > ${BackDropShadow} > ${InfoWrapper} > ${Info} > p {
-    color: #d1de35;
-    transition: 3s ease-in-out;
+    &:hover {
+      background-size: 108%;
+      box-shadow: 0 0 30px 0px rgb(0 0 0 / 100%);
+      filter: brightness(1.1);
+      transition: all 5s linear;
+    }
+    &:hover > ${BackDropShadow} {
+      background-color: transparent;
+    }
+    &:hover > ${BackDropShadow} > ${InfoWrapper} {
+      background: rgba(42, 39, 57, 0.6);
+      backdrop-filter: blur(7px);
+      transition: 1.5s ease-in-out;
+    }
+    &:hover > ${BackDropShadow} > ${AuthorWrapper} > ${Author} > p {
+      color: #5b5b5b;
+      transition: 2s ease-in-out;
+    }
+    &:hover > ${BackDropShadow} > ${AuthorWrapper} > ${Author} {
+      background-color: white;
+      transition: 2s ease-in-out;
+      box-shadow: 0 0 30px 0px rgb(0 0 0 / 100%);
+    }
+    &:hover > ${BackDropShadow} > ${InfoWrapper} > ${Info} > p {
+      transition: 3s ease-in-out;
+    }
   }
 `;
 

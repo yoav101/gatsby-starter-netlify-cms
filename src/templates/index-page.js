@@ -11,6 +11,7 @@ import Services from "../components/Services";
 import Contact from "../pages/contact";
 import "../components/Services.sass";
 import { FeedbackPageTemplate } from "./feedback-page";
+import { isMobile } from "react-device-detect";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -61,7 +62,7 @@ export const IndexPageTemplate = ({
               Blog
             </h3>
             <BlogRoll />
-            <div className="has-text-centered" style={{ marginTop: "65px" }}>
+            <div className="has-text-centered" style={{ marginTop: isMobile ? "25px" : "65px" }}>
               <Link className="seeMore" to="/blog">
                 See more
               </Link>
