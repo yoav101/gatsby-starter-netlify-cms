@@ -143,6 +143,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   border-radius: 15px;
+  max-width: 440px;
   margin-top: 5px;
   @media (min-width: 1024px) {
     background-size: 125%;
