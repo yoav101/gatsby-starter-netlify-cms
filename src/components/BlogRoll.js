@@ -8,11 +8,15 @@ import { getSrc } from "gatsby-plugin-image";
 import PersonIcon from "@mui/icons-material/Person";
 
 const BlogRollTemplate = ({ data }) => {
-  const url = (window.location.href).split("/");
-  let isHomePage = url[url.length - 1] === "blog";
+  const isBrowser = () => typeof window !== "undefined";
+  let isHomePage = false;
+  if (isBrowser()) {
+    const url = window.location.href.split("/");
+    isHomePage = url[url.length - 1] === "blog";
+  }
   const { edges: posts } = data.allMarkdownRemark;
   const displayBlogs = posts
-    .slice(0, isHomePage ? posts.length : (isMobile ? 2 : 6))
+    .slice(0, isHomePage ? posts.length : isMobile ? 2 : 6)
     .map(({ node: post }, index) => {
       const imgSrc = getSrc(post.frontmatter.featuredimage);
       return (
@@ -21,7 +25,7 @@ const BlogRollTemplate = ({ data }) => {
             <BackDropShadow>
               <AuthorWrapper>
                 <Author>
-                  <PersonIcon sx={{ color: "#5B5B5B" }}/>
+                  <PersonIcon sx={{ color: "#5B5B5B" }} />
                   <p>{post.frontmatter.author}</p>
                 </Author>
               </AuthorWrapper>
