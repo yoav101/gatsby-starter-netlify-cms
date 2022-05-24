@@ -131,7 +131,7 @@ intro:
       text: "https://zigit.co.il/"
 feedback:
   title: Feedback
-  image: ../img/feedback/feedBackBackground.png
+  image: "../img/feedback/feedBackBackground.png"
   intro:
     blurbs:
       - picturePath: Avsha_Shilin_feedback.png
