@@ -159,11 +159,7 @@ export const pageQuery = graphql`
         }
         feedback {
           title
-          image {
-            childImageSharp {
-              gatsbyImageData(quality: 75, layout: FULL_WIDTH)
-            }
-          }
+          image
           intro {
             blurbs {
               picturePath
