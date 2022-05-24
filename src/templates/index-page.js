@@ -54,7 +54,7 @@ export const IndexPageTemplate = ({
           />
         </div>
         <div className="section">
-          <div style={{ padding: "0" }}>
+          <div style={{ padding: "3rem" }}>
             <h3
               className="has-text-centered has-text-weight-bold is-size-1"
               style={{ color: "#3F3C55" }}
