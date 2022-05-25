@@ -23,7 +23,6 @@ export default function FullWidthImage(props) {
         {img?.url ? (
           <img
             src={img}
-            // objectFit={"cover"}
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
@@ -31,23 +30,19 @@ export default function FullWidthImage(props) {
               height: height,
               width: "100%",
             }}
-            // aspectratio={3 / 1}
             alt=""
             formats={["auto", "webp", "avif", "png"]}
           />
         ) : (
           <GatsbyImage
             image={img}
-            // objectFit={"cover"}
-            // objectPosition={imgPosition}
             objectPosition={"center"}
+            objectFit={"cover"}
             style={{
               gridArea: "1/1",
               minHeight: "750px",
-              // position: "unset",
             }}
             layout="fullWidth"
-            // aspectratio={3 / 1}
             alt=""
             formats={["auto", "webp", "avif", "png"]}
           />
@@ -64,7 +59,6 @@ export default function FullWidthImage(props) {
               justifyContent: "center",
               paddingTop: "75px",
               marginTop: "260px",
-              // By using the same grid area for both, they are stacked on top of each other
             }}
           >
             {imageLogo && (

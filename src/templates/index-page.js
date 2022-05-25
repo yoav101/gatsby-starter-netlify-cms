@@ -12,6 +12,7 @@ import Contact from "../pages/contact";
 import "../components/Services.sass";
 import { FeedbackPageTemplate } from "./feedback-page";
 import { isMobile } from "react-device-detect";
+import Career from "../components/Career";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -47,13 +48,10 @@ export const IndexPageTemplate = ({
           </div>
         </div>
         <div style={{ padding: "0" }}>
-          <FeedbackPageTemplate
-            title={feedback.title}
-            intro={feedback.intro}
-          />
+          <FeedbackPageTemplate title={feedback.title} intro={feedback.intro} />
         </div>
         <div className="section">
-          <div style={{ padding: "3rem" }}>
+          <div style={{ padding: "0rem" }}>
             <h3
               className="has-text-centered has-text-weight-bold is-size-1"
               style={{ color: "#3F3C55" }}
@@ -71,13 +69,16 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
+        <div>
+          <Career />
+        </div>
         <div className="" style={{ padding: "0" }}>
           <Contact noLayout />
           {/* <div className="column is-12 has-text-centered">
                 <Link className="seeMore" to="/contact">
                   Go to contact page
                 </Link>
-              </div> */}
+          </div> */}
         </div>
       </div>
     </>
