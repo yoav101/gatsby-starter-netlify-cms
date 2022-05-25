@@ -162,7 +162,6 @@ export const pageQuery = graphql`
         }
         feedback {
           title
-          image
           intro {
             blurbs {
               picturePath
