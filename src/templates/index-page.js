@@ -50,7 +50,6 @@ export const IndexPageTemplate = ({
           <FeedbackPageTemplate
             title={feedback.title}
             intro={feedback.intro}
-            image={feedback.image}
           />
         </div>
         <div className="section">

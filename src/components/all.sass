@@ -1,13 +1,11 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
 $body-color: #3F3C55
-$black: #2b2523
+
+html
+  body
+    font-family: 'Work sans'
 
 .navbar .navbar-menu
   box-shadow: none !important
@@ -50,23 +48,6 @@ $black: #2b2523
   justify-content: center
   align-items: center
 
-.btn
-  display: inline-block
-  padding: 12px 16px 10px
-  font-size: 18px
-  font-size: 1rem
-  line-height: 1.25
-  background-color: #fff
-  border-radius: .25rem
-  text-decoration: none
-  font-weight: 700
-  color: #CC3700
-  text-align: center
-  -webkit-box-shadow: inset 0 0 0 2px #CC3700
-  box-shadow: inset 0 0 0 2px #f40
-  -webkit-transition: all .15s ease
-  transition: all .15s ease
-
 .seeMore
   font-weight: 800
   font-size: 1.25rem
@@ -84,27 +65,24 @@ $black: #2b2523
 
 .navbar
   box-shadow: 0px 4px 40px rgba(179, 179, 179, 0.25)
+  .navbar-item
+    color: #000
+  .navbar-item:hover
+    color: #D1DE35
 
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+
 footer.footer
   padding: 1rem
   background-color: transparent
 
 //Menu overrides
 $menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color: 	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
 .menu-label

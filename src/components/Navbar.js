@@ -46,7 +46,7 @@ const Navbar = () => {
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
           <div
             className="navbar-start has-text-centered"
-            style={{ fontWeight: "500", fontSize: "16px", gap: "8px" }}
+            style={{ fontWeight: "500", fontSize: "16px", gap: "8px", color: "#000" }}
           >
             <Link className="navbar-item" to="/">
               Home
