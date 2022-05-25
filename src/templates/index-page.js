@@ -62,7 +62,10 @@ export const IndexPageTemplate = ({
               Blog
             </h3>
             <BlogRoll />
-            <div className="has-text-centered" style={{ marginTop: isMobile ? "25px" : "65px" }}>
+            <div
+              className="has-text-centered"
+              style={{ marginTop: isMobile ? "25px" : "65px" }}
+            >
               <Link className="seeMore" to="/blog">
                 See more
               </Link>
@@ -159,7 +162,11 @@ export const pageQuery = graphql`
         }
         feedback {
           title
-          image
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 75, layout: CONSTRAINED)
+            }
+          }
           intro {
             blurbs {
               picturePath
