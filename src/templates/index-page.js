@@ -162,11 +162,7 @@ export const pageQuery = graphql`
         }
         feedback {
           title
-          image {
-            childImageSharp {
-              gatsbyImageData(quality: 75, layout: CONSTRAINED)
-            }
-          }
+          image
           intro {
             blurbs {
               picturePath
