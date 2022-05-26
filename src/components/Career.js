@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 import "./Career.sass";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import career_design from "../img/career_design.svg";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 
 const CareerTemplate = ({ data }) => {
@@ -14,22 +15,42 @@ const CareerTemplate = ({ data }) => {
         <div className="careersHeading">Careers</div>
         <div className="careersDescription">{markdown.title}</div>
       </div>
-      <div className="image_container">
+      <img
+        src={career_design}
+        alt=""
+        style={{
+          position: "absolute",
+          zIndex: 2,
+        }}
+      />
+      <div
+        className="image_container"
+        style={{
+          position: "relative",
+        }}
+      >
         <GatsbyImage
           image={backGroundImage}
           objectPosition={"center"}
           objectFit={"cover"}
           style={{
-            minHeight: "670px",
+            minHeight: "448px",
           }}
           layout="fullWidth"
           alt=""
         />
-      </div>
-      <div>
-        {markdown.positions?.map((item, i) => (
-          <CareerCard key={i} item={item} />
-        ))}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "30px",
+            zIndex: 2,
+          }}
+        >
+          {markdown.positions?.map((item, i) => (
+            <CareerCard key={i} item={item.position} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -43,15 +64,17 @@ Career.propTypes = {
   }),
 };
 
-const CareerCard = ({ item }) => {
+export const CareerCard = ({ item }) => {
   return (
-    <div className="card_container">
-      <div>{item.position}</div>
-      <div className="requirements_container">
-        <span>Requirements</span>
-        <ArrowForwardRoundedIcon />
+    <Link to="/career" state={item} style={{color: "#3F3C55"}}>
+      <div className="card_container">
+        <div>{item.title}</div>
+        <div className="requirements_container">
+          <span>Requirements</span>
+          <ArrowForwardRoundedIcon />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -69,7 +92,15 @@ export default function Career() {
               }
               title
               positions {
-                position
+                position {
+                  title
+                  requirements {
+                    must
+                  }
+                  advantages {
+                    advantage
+                  }
+                }
               }
             }
           }

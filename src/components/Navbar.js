@@ -26,7 +26,12 @@ const Navbar = () => {
             <img
               src={logo}
               alt="MsApps"
-              style={{ width: "190px", height: "75px", maxHeight: "100px", marginRight: "130px" }}
+              style={{
+                width: "190px",
+                height: "75px",
+                maxHeight: "100px",
+                marginRight: "130px",
+              }}
             />
           </Link>
           <div
@@ -46,24 +51,49 @@ const Navbar = () => {
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
           <div
             className="navbar-start has-text-centered"
-            style={{ fontWeight: "500", fontSize: "16px", gap: "8px", color: "#000" }}
+            style={{
+              fontWeight: "500",
+              fontSize: "16px",
+              gap: "8px",
+              color: "#000",
+            }}
           >
-            <Link className="navbar-item" to="/">
+            <Link className="navbar-item" to="/" activeClassName="activeRoute">
               Home
             </Link>
-            <Link className="navbar-item" to="/about">
+            <Link
+              className="navbar-item"
+              to="/about"
+              activeClassName="activeRoute"
+            >
               About
             </Link>
-            <Link className="navbar-item" to="/feedbacks">
+            <Link
+              className="navbar-item"
+              to="/feedbacks"
+              activeClassName="activeRoute"
+            >
               Feedbacks
             </Link>
-            <Link className="navbar-item" to="/blog">
+            <Link
+              className="navbar-item"
+              to="/blog"
+              activeClassName="activeRoute"
+            >
               Blog
             </Link>
-            <Link className="navbar-item" to="/contact">
+            <Link
+              className="navbar-item"
+              to="/contact"
+              activeClassName="activeRoute"
+            >
               Contact
             </Link>
-            <Link className="navbar-item" to="/clients">
+            <Link
+              className="navbar-item"
+              to="/clients"
+              activeClassName="activeRoute"
+            >
               Clients
             </Link>
           </div>

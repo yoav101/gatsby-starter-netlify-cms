@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./MapGoogle.sass";
 
+
 export default function MapGoogle(props) {
   const { height } = props;
 

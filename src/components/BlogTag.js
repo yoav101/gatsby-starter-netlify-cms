@@ -6,7 +6,7 @@ import defualtImg from '../img/defaultBlogImg.jpg';
 const BlogTag = ({ data }) => {
   const url = data?.featuredimage?.publicURL
   const img = url && !url.includes("webp") ? data.featuredimage.publicURL : defualtImg;
-  // debugger
+
   return (
     <div
       className="container_BlogTag"

@@ -1,64 +1,22 @@
-// import React from "react";
-// import PropTypes from "prop-types";
-// import { graphql } from "gatsby";
-// import Layout from "../components/Layout";
-// import Career from "../components/Career";
-// import "../components/Career.sass";
+import React from "react";
+import "../components/Career.sass";
+import Layout from "../components/Layout";
 
-// // eslint-disable-next-line
-// export const CareerPageTemplate = () => {
-//   return (
-//     <div>
-//       <div className="CareerContainer">
-//         <div className="clientCareerContainer">
-//           <Career />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// // CareerPageTemplate.propTypes = {
-// //   title: PropTypes.string,
-// //   intro: PropTypes.shape({
-// //     blurbs: PropTypes.array,
-// //   }),
-// // };
-
-// const CareerPage = ({ data }) => {
-//   const { frontmatter } = data.markdownRemark;
-//   debugger;
-//   return (
-//     <Layout>
-//       <CareerPageTemplate />
-//     </Layout>
-//   );
-// };
-
-// CareerPage.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       frontmatter: PropTypes.object,
-//     }),
-//   }),
-// };
-
-// export default CareerPage;
-
-// // export const CareerPageQuery = graphql`
-// //   query CareerPage {
-// //     markdownRemark(frontmatter: { templateKey: { eq: "career-page" } }) {
-// //       frontmatter {
-// //         image {
-// //           childImageSharp {
-// //             gatsbyImageData(quality: 75, layout: FULL_WIDTH)
-// //           }
-// //         }
-// //         title
-// //         positions {
-// //           position
-// //         }
-// //       }
-// //     }
-// //   }
-// // `;
+// eslint-disable-next-line
+const CareerPageTemplate = ({ location }) => {
+  const position = location.state;
+  return (
+    <Layout>
+      <div>
+        <div>{position.title}</div>
+        {position.requirements.map((el, index) => {
+          return <div key={index}>{el.must}</div>;
+        })}
+        {position.advantages.map((el, index) => {
+          return <div key={index}>{el.advantage}</div>;
+        })}
+      </div>
+    </Layout>
+  );
+};
+export default CareerPageTemplate;

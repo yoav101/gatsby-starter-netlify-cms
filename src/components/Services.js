@@ -12,7 +12,6 @@ const Services = ({ data }) => {
           background: `url(${whatWeDo})`,
           minHeight: "800px",
           backgroundRepeat: "no-repeat",
-          // position: "relative",
           backgroundSize: "cover",
           alignItems: "center",
           display: "flex",
