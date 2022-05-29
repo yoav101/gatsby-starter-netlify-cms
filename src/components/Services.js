@@ -10,7 +10,7 @@ const Services = ({ data }) => {
         className="container_Services"
         style={{
           background: `url(${whatWeDo})`,
-          minHeight: "800px",
+          minHeight: "900px",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           alignItems: "center",
