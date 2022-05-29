@@ -47,9 +47,10 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
-  gap: 1rem;
+  gap: 2.5rem;
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `;
 const Info = styled.div`

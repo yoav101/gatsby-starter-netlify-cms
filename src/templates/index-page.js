@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
         <div style={{ padding: "0" }}>
           <FeedbackPageTemplate title={feedback.title} intro={feedback.intro} />
         </div>
-        <div className="section">
+        <div className="section" style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ padding: "0rem" }}>
             <h3
               className="has-text-centered has-text-weight-bold is-size-1"

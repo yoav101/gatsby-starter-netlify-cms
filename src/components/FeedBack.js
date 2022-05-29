@@ -6,7 +6,7 @@ import { isMobile } from "react-device-detect";
 
 const FeedBack = ({ items }) => (
   <div style={{ position: "relative", paddingBottom: "50px" }}>
-    <Carousel autoPlay={false} duration={1000} animation="fade" swipe height={"730px"}>
+    <Carousel autoPlay={false} duration={1000} swipe height={"730px"}>
       {items?.map((item, i) => (
         <Item key={i} item={item} />
       ))}
