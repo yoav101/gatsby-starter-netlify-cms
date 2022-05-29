@@ -29,24 +29,20 @@ const CareerTemplate = ({ data }) => {
           position: "relative",
         }}
       >
+        <div>
         <GatsbyImage
           image={backGroundImage}
           objectPosition={"center"}
           objectFit={"cover"}
           style={{
             minHeight: "448px",
+            maxHeight: "730px",
           }}
           layout="fullWidth"
           alt=""
         />
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: "30px",
-            zIndex: 2,
-          }}
-        >
+        </div>
+        <div className="cards_container">
           {markdown.positions?.map((item, i) => (
             <CareerCard key={i} item={item.position} />
           ))}
@@ -66,11 +62,11 @@ Career.propTypes = {
 
 export const CareerCard = ({ item }) => {
   return (
-    <Link to="/career" state={item} style={{color: "#3F3C55"}}>
+    <Link to="/career" state={item} style={{ color: "#3F3C55" }}>
       <div className="card_container">
         <div>{item.title}</div>
         <div className="requirements_container">
-          <span>Requirements</span>
+          <span>Apply</span>
           <ArrowForwardRoundedIcon />
         </div>
       </div>
